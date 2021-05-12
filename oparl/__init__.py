@@ -195,7 +195,7 @@ def _is_url(value):
     return isinstance(value, six.string_types) and value.startswith('http')
 
 
-class ExternalObjectList(collections.Sequence):
+class ExternalObjectList(collections.abc.Sequence):
     '''
     (Lazy) list of OParl objects.
 
@@ -293,7 +293,7 @@ class ExternalObjectList(collections.Sequence):
                          url=self.url))
 
 
-class Object(collections.Mapping):
+class Object(collections.abc.Mapping):
     '''
     Base class for all OParl objects.
 
